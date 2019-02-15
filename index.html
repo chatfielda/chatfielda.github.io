@@ -100,9 +100,20 @@
 }
 </style>
 
-<script src = "picturefill.js" async></script>
+
+<head>
+  <script>
+    // Picture element HTML5 shiv - added the async attribute to improve page load efficiency 
+    document.createElement( "picture" );
+  </script>
+  <script src="picturefill.js" async></script>
 </head>
-<body>
+
+
+<!-- <script src = "picturefill.js" async></script>
+</head> -->
+
+    <body>
 
        
 
@@ -114,9 +125,9 @@
 </div>
 
 <nav class = "navWalk">
-        <li >The Walk</li>
-        <li >The Dog</li>
-        <li >The Route</li>
+        <li >Walk</li>
+        <li >Dog</li>
+        <li >Route</li>
         <li >Gallery</li>
           
 </nav>
@@ -129,7 +140,7 @@
 
   <div class="aside">
     <h2>What?</h2>
-    <p>We're a dog walking service that help busy people make sure Fido get's their walk in</p>
+    <p>We're a dog walking service that helps busy people make sure Fido gets their walk in</p>
     <h2>Where?</h2>
     <p>We will pick up your dog from your home and take Fido to the local dog park</p>
     <h2>Price?</h2>
