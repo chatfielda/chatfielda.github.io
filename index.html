@@ -1,156 +1,92 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- <meta name="viewport" content="width=device-width, initial-scale=.43"> -->
-<style>
-:root {
-    background-color: antiquewhite;
-    font-size: 25px;
-    font-family: courier, Helvetica, sans-serif;
-}
-.containerHeader {
-    display: grid;
-    grid-template-columns: 20% 1fr 20%;
-    grid-template-rows: 20px 20vh 20px;
-    /* grid-gap: 1em; */
-}
-.containerBody {
-    display: grid;
-    grid-template-columns: auto 1fr 40%;
-    grid-template-rows: auto 1fr 40px;
-    grid-gap: 1em;
-    background-color: #535379;
-}
-.navWalk {
-    display: flex;
-    flex-direction: row;
-    background-color: burlywood;
-    text-align: center;
-    list-style: none;
-    justify-content: space-evenly;
-    /*see https://css-tricks.com/snippets/css/a-guide-to-flexbox/ for information on justify content for nav */
-}
-.heading {
-    grid-column: 1/ span 3;
-    margin: 1px;
-    grid-row: 2;
-    font-size: 3em;
-    text-align: center;
-    background-color: white;
-}
-.dogImage {
-  grid-column: 1/ span 2;
-  grid-row: 1/ span 1;
-  background-color: white;
-}
-.aside {
-  background-color: #d1d1e0;
-  grid-column: 3;
-  grid-row: 1;
-  padding: 2px;
-  margin: 5px;
-}
-@media only screen and (max-width:800px) {
-  /* For tablets: */
-  
-  .container {
-    display: flex;
-    flex-direction: row;
-    padding: 0 5%;
-    text-align: center;
-    
-  }
-  
-  
-  .main {
-    width: 80%;
-    padding: 0;
-  }
-  .right {
-    width: 100%;
-  }
-  .heading {
-    grid-column: 1/ span 3;
-    padding: 0 10%;
-    grid-row: 2;
-    font-size: 1em;
-    text-align: center;
-  }
-}
-@media only all and (max-width:500px orientation= landscape) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width: 100%;
-  }
-  .container {
-    display: flex;
-    flex-direction: row;
-    padding: 0 5%;
-    text-align: center;
-    
-  }
-  .heading {
-    grid-column: 1/ span 3;
-    padding: 0 10%;
-    grid-row: 2;
-    font-size: 1em;
-    text-align: center;
-}
-}
-</style>
+
+ <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <link rel="stylesheet" href="main.css"/>
+
+        
 
 
-<head>
-  <script>
-    // Picture element HTML5 shiv- Added the asynch attribute tag to improve page loading efficiency
-    document.createElement( "picture" );
-  </script>
-  <script src="picturefill.js" async></script>
-</head>
+        </head>
 
+        <body>
 
-<!-- <script src = "picturefill.js" async></script>
-</head> -->
-<body>
+            <h1 align="center">Pick Your Pizza</h1>
 
-       
+            <h3 align="center">Wisteria Pizzeria Delivery App</h3>
 
-<div class = "containerHeader">
-<div class = "heading">
-  Walking the Dog to the Park
-  <!-- <h3>Resize the browser window</h3> -->
-</div>
-</div>
+            <img  src="pizza.svg" 
+            alt="Pizza" class="center" height="200" width="200">
 
-<nav class = "navWalk">
-        <li >Walk</li>
-        <li >Dog</li>
-        <li >Route</li>
-        <li >Gallery</li>
-          
-</nav>
-
-
-<div class = "containerBody">
-  <div class="dogImage">
-     <img src="dog.svg">
-  </div>
-
-  <div class="aside">
-    <h2>What?</h2>
-    <p>We're a dog walking service that helps busy people make sure Fido gets their walk in</p>
-    <h2>Where?</h2>
-    <p>We will pick up your dog from your home and take Fido to the local dog park</p>
-    <h2>Price?</h2>
-    <p>Our rate is $20/week per dog</p>
-  </div>
-</div>
-</div>
+            
 
 
 
 
-</body>
+            <label for="select-choice-8" class="select">Click the drop down menu below and select the pizza you wish to order from our menu:</label>
+            
+            <select name="select-choice-8" id="select-choice-8" multipl="multiple" data-native-menu="false" data-icon="grid" data-iconpos="left">
+
+                <option>Choose a few options:</option>
+
+                <optgroup label="Homemade Pizza with Wheat Crust">
+                    <option value="cheese" selected="">Cheese </option>
+
+                    <option value="pepperoni">Pepperoni</option>
+
+                    <option value="supreme">Supreme</option>
+
+                    </optgroup>
+
+                <optgroup label="Homemade Pizza with Gluten Free Crust">
+
+                    <option value="cheeseGF">Cheese</option>
+
+                    <option value="pepperoniGF">Pepperoni</option>
+
+                    <option value="supremeGF">Supreme</option>
+
+                    </optgroup>
+
+                    <optgroup label="Homemade Vegan Pizza Options!!!">
+
+                        <option value="veganMargherita"> Margherita</option>
+
+                        <option value="veganRoastedVeggie">Roasted Veggie</option>
+
+                        <option value="veganHawaiian">Harmless Hawaiian</option>
+
+                    </optgroup>
+                </select>
+
+
+                <h3 align="center">Where you are staying:</h3>
+
+                <label  for="text-basic">Enter your camp-site number here:</label>
+
+                <input  type="text-basic" id="text-basic" value="">
+
+
+                <h3 align="center">How Can We Reach You?</h3>
+
+
+                <label for="tel">Give us those cell phone digits:</label>
+                <input type="tel" name="tel" id="tel" value="">
+
+
+
+                <h4 align="center">We only accept cash!</h4>
+                
+                <p align="center"> Please have your payment ready upon delievery. Only whole pizzas are available for delievery. To purchase pizza by the slice, or with a credit card as your method of payment, please come to the Pavillion during business hours.</p>
+
+
+
+               
+
+
+        </body>
+
 </html>
-
